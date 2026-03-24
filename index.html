@@ -818,7 +818,7 @@ function setMode(m){ sendMode=m; document.getElementById('opt-once').classList.t
 
 function previewFile(e){
   const file=e.target.files[0]; if(!file) return;
-  if(file.size>15.5*1024*1024){ toast('photo too large — max 15MB','err'); return; }
+  if(file.size>10.5*1024*1024){ toast('photo too large — max 10MB','err'); return; }
   const reader=new FileReader();
   reader.onload=ev=>{
     selectedImageB64=ev.target.result;
